@@ -1,0 +1,53 @@
+@import "mixins/all.less";
+
+// Default settings override
+
+@sprite-image: '../img/sprite.png';
+@using-modernizr: false;
+@using-ieclasses: true;
+
+@total-columns: 16;
+@column-width: 60px;
+@gutter-width: 20px;
+
+@base-font-size: 10;
+
+// Project settings
+
+@mobile-width: 40em;
+ 
+/* ---- reset ---- */
+
+.normalize();
+
+/* ---- setup ---- */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  font-family: 'Conduit ITC W01 Medium';
+}
+
+h1, h2 {
+  font-family: 'Bad Script', cursive;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Let the jumbotron breathe */
+  .jumbotron {
+    margin-top: 20px;
+  }
+  /* Remove padding from wrapping element since we kick in the grid classes here */
+  .body-content {
+    padding: 0;
+  }
+}
